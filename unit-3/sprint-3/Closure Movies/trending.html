@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movie</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*--------------------------------Header Styling--------------------------*/
+        #header{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(97, 20, 168);
+            height: 50px;
+            color: white;
+            position: fixed;
+            width: 100%;
+        }
+        #left{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        #right{
+            width: 40%;
+            display: flex;
+            margin-top: 10px;
+            margin-right: 20px;
+            justify-content: space-evenly;
+            font-size: 22px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        a:hover{
+            color: #0cb4e7;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #search{
+            width: 280px;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        #subscribe{
+            cursor: pointer;
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 15px;
+            background-color: rgb(6, 6, 240);
+        }
+        #subscribe:hover{
+            background-color: red;
+            color: black;
+        }
+
+        /*--------------------------------Container Styling--------------------------------*/
+
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(124, 122, 119);
+        }
+        #container>div>img{
+            height: 300px;
+            width: 95%;
+            margin-top: 30px;
+        }
+        #container>div{
+            margin-top: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            color: black;
+            height: 420px;
+            border-radius: 30px;
+            background-color: rgb(35, 117, 117);
+        }
+
+        h1{
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgb(69, 69, 212);
+            transition: background-color 0.5s ease;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="left">
+            <div id="logo">
+                <a href="index.html"><i>MOVIE-STORE</i></a>
+            </div>
+            <div><a href="trending.html">Trending Movie</a>
+            </div>
+            <div>
+                <a href="#">Sports</a>
+            </div>
+            <div><a href="#">Live</a>
+            </div>
+        </div>
+
+        <div id="right">
+            <div>
+                <input id="search" oninput="debounce(main,1000)" type="text" placeholder="Search Movies Here..."/>
+            </div>
+            <div>
+                <span id="subscribe">SUBSCRIBE</span>
+            </div>
+            <div>
+                <a href="login.html" id="login">Login</a>
+            </div>
+        </div>
+    
+    </header>
+    <br>
+    <h1>Trending Movies!</h1>
+    <div id="container">
+        
+    </div>
+    
+</body>
+</html>
+<script>
+    let key=`a2b3dfd422f1993f16ea9678e7a1cdff`;
+    let url1=`https://api.themoviedb.org/3/discover/movie?api_key=${key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate';`;
+    async function getRecommendedMovie(){
+        try{
+            let res= await fetch(url1);
+            let data= await res.json();
+            data=data.results;
+            console.log("data",data);
+            appendMovieData(data);
+        }catch (error){
+            console.log("Error",error);
+        }
+    }
+    getRecommendedMovie();
+
+    let container=document.getElementById('container');
+    function appendMovieData(data){
+        container.innerHTML="";
+        data.map((ele)=>{
+            let div = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = `https://image.tmdb.org/t/p/w500/${ele.poster_path}`;
+
+            let title = document.createElement("h3")
+            title.textContent = `Movie : ${ele.title}`;
+
+            let detail=document.createElement('p');
+            detail.textContent=ele.overview;
+
+            let year = document.createElement("h4");
+            year.textContent = `Release Year : ${ele.release_date}`;
+
+            let rating = document.createElement("h4");
+            rating.textContent = `Rating : ${ele.vote_average}`;
+            let rate=`${ele.vote_average}`;
+            console.log(rate);
+
+            let recomandation = document.createElement("h3");
+            recomandation.textContent=`Recomanded`;
+            recomandation.style.color='white';
+
+            if(rate>7.0){
+                div.append(image,title,year,rating,recomandation);
+            }else{
+                div.append(image,title,year,rating);
+            }
+            container.append(div);
+        });
+    }
+</script>

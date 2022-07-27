@@ -1,0 +1,37 @@
+#cart{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    gap: 10px;
+}
+
+#cart>div>img{
+    width: 200px;
+    height: 200px;
+}
+#cart>div{
+    box-shadow: 5px 5px 4px 4px #888888;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#removeitem{
+    margin-bottom: 10px;
+    background-color: tomato;
+    font-size: 16px;
+    padding: 5px;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#checkout{
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(55, 14, 202);
+    text-align: center;
+    text-decoration: underline;
+}
+h2{
+    font-size: 40px;
+    color: green;
+    text-align: center;
+}

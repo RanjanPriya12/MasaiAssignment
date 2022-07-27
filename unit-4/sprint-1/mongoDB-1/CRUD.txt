@@ -1,0 +1,45 @@
+use assigment
+show dbs
+use assigment
+db.createCollection('users')
+show collections
+
+// Insert One item or document
+db.users.insert({first_name: 'Priya', last_name: 'Ranjan', email:'Priya@.com', gender:'Female', ip_address:'A-B-C-D', age:26})
+
+// Insert Many document
+db.users.insertMany([{first_name:'Priti', last_name:'Ranjan', email:'priti@gmail.com', gender:'Female', ip_address:'M-N-P-Q', age:28},
+{first_name:'Alok', last_name:'Ranjan', email:'alok@kumar.com', gender:'Male', ip_address:'P-Q-R-T', age:21},
+{first_name:'Aditi', last_name:'Kumari', email:'aditi@kumari.com, gender:'Female', ip_address:'S-D-F-G', age:23},
+{first_name:'Rajeev', last_name:'Ranjan', email:'Rajeevkumar@.com', gender:"Male', ip_address:'F-G-T-Y', age: 20},
+{first_name:'Satendra', last_name:'Yadav', email:'Sat@gmail.com', ip_address:'W-C-S-F', age:25},
+{first_name:'Anup', last_name:'Haldar', email:'anup@haldar.com', ip_address:'Q-C-F-T', age:22},
+{first_name:'Gyan', last_name:'Maurya', email:'gyan@gmail.com', ip_address:'W-w-G-F', age:25},
+{first_name:'Avinash', last_name:'Kumar', email:'Avinash@kumarr.com', ip_address:'Q-C-F-T', age:28},
+{first_name:'Girija', last_name:'Mahal', email:'girija@gmail.com', ip_address:'A-C-D-F', age:23}])
+
+// Update One document
+
+db.users.update({first_name:'Priya'}, {$set:{email:'Priya@ranjan.com'}})
+
+// Update Many Documnets
+
+db.users.updateMany({last_name:'Ranjan'},{$set:{last_name:'Ranjan Family'}})
+
+
+// Delete One document
+
+db.users.deleteOne({first_name:'Priya'})
+
+// Delete Many Documnets
+
+db.users.deleteMany({last_name:'Ranjan'})
+
+// Delete Using Remove
+
+db.users.remove({first_name:'Aditi'})
+
+// Delete Database
+
+db.dropDatabase()
+

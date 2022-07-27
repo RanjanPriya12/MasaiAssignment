@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searched Item</title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+      }
+      #main{
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        grid-gap: 3%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <!--No need to add sidebar here, directly display search results here only-->
+    </div>
+  </body>
+</html>
+<script type="module">
+  import {getData,appendData} from './scripts/main.js';
+  let input_val=localStorage.getItem('Item');
+  let url=`https://api.unsplash.com/photos/?&query=${input_val}&client_id=u6wEwe8Z6O3D74c9TUArDxu4pPExu2fjKq1W6MuXonc&per_page=50`;
+  let res=await getData(url);
+  console.log(res);
+
+  let parent=document.getElementById('main');
+  appendData(res,parent);
+</script>

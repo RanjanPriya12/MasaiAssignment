@@ -1,0 +1,444 @@
+//Add to cart
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+    <title>Cart</title>
+  </head>
+  <body>
+    <div id="container"></div>
+​
+    <input type="text" placeholder="Coupon Code" id="couponInput" />
+    <button onClick="applyCoupon()">Apply Coupon</button>
+​
+    <!-- display to show total -->
+    <p id="totalDisplay"></p>
+    <br />
+    <br />
+    <!-- 6. link for checkout page -->
+    <a href="checkout.html">CLICK HERE FOR CHECKOUT</a>
+    <script>
+      let cart = localStorage.getItem("cart");
+      if (!cart) {
+        cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart));
+      } else {
+        cart = JSON.parse(cart);
+      }
+​
+      let total = cart.reduce(function (acc, curr) {
+        return acc + curr.price;
+      }, 0);
+​
+      let container = document.getElementById("container");
+​
+      // create table and table head;
+      let table = document.createElement("table");
+      let thead = document.createElement("thead");
+      let theadRow = document.createElement("tr");
+      let th1 = document.createElement("th");
+      th1.textContent = "Image";
+      let th2 = document.createElement("th");
+      th2.textContent = "Title";
+      let th3 = document.createElement("th");
+      th3.textContent = "Price";
+​
+      theadRow.append(th1, th2, th3);
+      thead.append(theadRow);
+      let tbody = document.createElement("tbody");
+​
+      cart.forEach(function (prod) {
+        // {id:1, title:1, ...}
+        //  go through each of the item in the cart and append it to table one in each row;
+        let tr = document.createElement("tr");
+​
+        let td1 = document.createElement("td");
+        let prodImg = document.createElement("img");
+        prodImg.src = prod.image;
+        td1.append(prodImg);
+        let td2 = document.createElement("td");
+        td2.textContent = prod.title;
+        let td3 = document.createElement("td");
+        td3.textContent = prod.price;
+​
+        tr.append(td1, td2, td3);
+        tbody.append(tr);
+      });
+      table.append(thead, tbody);
+      container.append(table);
+​
+      function totalDisplay(total) {
+        // 280.6 ,150.6
+        let totalDisplay = document.getElementById("totalDisplay"); // get totalDisplay element
+        totalDisplay.textContent = "Total : " + total; // updated it's value with card total that has been passed as param;
+      }
+      totalDisplay(total);
+​
+      function applyCoupon() {
+        let couponInput = document.getElementById("couponInput").value; // get coupoun inputted by user
+        if (couponInput === "masai30") {
+          // check if matches;
+          // total = prev total - 30% total;
+          total = total - 0.3 * total; // give discount by reducing total;
+          totalDisplay(total); // update dom
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+//address Section
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      textarea {
+        resize: none;
+      }
+    </style>
+    <title>Checkout</title>
+  </head>
+  <body>
+    <textarea name="address" id="address" cols="50" rows="10"></textarea>
+    <button onclick="addAddress()">ADD ADDRESS</button>
+    <script>
+      function addAddress() {
+        let address = document.getElementById("address").value;
+        console.log(address);
+        if (address) {
+          // if address exists; redirect to payment page;
+          window.location.href = "payment.html";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+//payment 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>Payment Page</title>
+  </head>
+  <body>
+    <label for="cardNumber">Card Number</label>
+    <input
+      type="text"
+      id="cardNumber"
+      name="cardNumber"
+      placeholder="Card Number"
+    />
+    <br />
+    <br />
+    <label for="dateOfExpiry">Date Of Expiry</label>
+    <input
+      type="date"
+      id="dateOfExpiry"
+      name="dateOfExpiry"
+      placeholder="Date Of Expiry"
+    />
+    <br />
+    <br />
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" placeholder="CVV" />
+    <br />
+    <br />
+    <button onclick="createOrder()">Make Payment</button>
+    <br />
+    <br />
+    <script>
+      function createOrder() {
+        let cardNumber = document.getElementById("cardNumber").value;
+        let dateOfExpiry = document.getElementById("dateOfExpiry").value;
+        let cvv = document.getElementById("cvv").value;
+        console.log(cardNumber, dateOfExpiry, cvv);
+        if (cardNumber && dateOfExpiry && cvv) {
+          setTimeout(function () {
+            alert("order has been created successfully");
+          }, 3000);
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+//Product
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+      button,
+      select {
+        margin-top: 10px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #navbar {
+        background-color: #cecece;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 20px;
+      }
+      #navbar > * {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+      }
+      #container > div {
+        padding: 10px;
+        border: 1px solid #cecece;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .text-align-center {
+        text-align: center;
+      }
+    </style>
+    <title>Products</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="cart-count"></div>
+      <a href="cart.html">Cart</a>
+    </div>
+    <div id="sort-filter">
+      <select name="sort" id="sortButton" onchange="sortProducts()">
+        <option value="">SORT</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+      <select name="filter" id="filterButton" onchange="filterProducts()">
+        <option value="">FILTER</option>
+        <option value="0-50">0 - 50</option>
+        <option value="51-150">51 - 150</option>
+        <option value=">150">Greater than 150</option>
+      </select>
+    </div>
+    <div id="container"></div>
+    <script>
+      let url = `https://fakestoreapi.com/products`;
+​
+      async function getProducts() {
+        try {
+          let productsList = await fetchProducts(url); // expected response [{id:1, title:1, ...},{},{}...]
+          renderProducts(productsList);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      getProducts();
+​
+      // to prevent unexpected error for the first time when we start application since there is no "cart" data in local storage initially;
+      let cart = localStorage.getItem("cart");
+      if (!cart) {
+        // if cart is null/undefined;
+        cart = []; // initialize it with empty array;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        refreshCartCount(cart);
+      } else {
+        // if data exists in cart;
+        cart = JSON.parse(cart); // get the data | data format [{id:1, title:1, ..},{},{}]
+        refreshCartCount(cart);
+      }
+​
+      function refreshCartCount(cart) {
+        // argument format [{id:1, title:1, ...},{},{}]
+        let cartCount = document.getElementById("cart-count");
+        cartCount.textContent = " Cart Count : " + cart.length;
+      }
+​
+      function fetchProducts(url) {
+        return fetch(url) // fetch the data from url provided;
+          .then(function (res) {
+            return res.json(); // collect all the data that comes in form of data packet and make it a single entity
+          })
+          .then(function (res) {
+            return res; // returns the response;
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+​
+      // this function gets invoked when users changes sort criteria
+      async function sortProducts() {
+        try {
+          // get all the products;
+          // if sortCriteria --> asc,desc; --> sort the products;
+          // render/display the sorted/filtered products
+          let productsList = await fetchProducts(url);
+          let sortCriteria = document.getElementById("sortButton").value; // "asc", "desc"
+          // filter critera here so that before sorting and showing result; if there exists filter criteria; it also is taken in consideration;
+          let filterCriteria = document.getElementById("filterButton").value; //values expected : "0-50" , "51-150", ">150"
+​
+          if (sortCriteria) {
+            let updatedProductsList = productsList
+              .filter(filterFunction)
+              .sort(function sortFunction(prodA, prodB) {
+                if (sortCriteria === "asc") {
+                  return prodA.price - prodB.price;
+                } else if (sortCriteria === "desc") {
+                  return prodB.price - prodA.price;
+                }
+              });
+            renderProducts(updatedProductsList);
+          } else {
+            let updatedProductsList = productsList.filter(filterFunction);
+            renderProducts(updatedProductsList);
+          }
+​
+          /* 
+          if there exists filter criteria; -->only elements which passes the filter criteria gets returns -
+          ->else all the element gets returned;
+          */
+          function filterFunction(prod) {
+            if (filterCriteria === "0-50") {
+              return prod.price <= 50;
+            } else if (filterCriteria === "51-150") {
+              return prod.price > 50 && prod.price <= 150;
+            } else if (filterCriteria === ">150") {
+              return prod.price > 150;
+            } else {
+              return true;
+            }
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+​
+      async function filterProducts() {
+        try {
+          // get all the products;
+          // if sortCriteria --> asc,desc; --> sort the products;
+          // render/display the sorted/filtered products
+          let productsList = await fetchProducts(url); // [{},{}]
+          let filterCriteria = document.getElementById("filterButton").value; //values expected : "0-50" , "51-150", ">150"
+          let sortCriteria = document.getElementById("sortButton").value; //"asc", "desc"
+          if (sortCriteria) {
+            let updatedProductsList = productsList
+              .filter(filterFunction)
+              .sort(function sortFunction(prodA, prodB) {
+                if (sortCriteria === "asc") {
+                  return prodA.price - prodB.price;
+                } else if (sortCriteria === "desc") {
+                  return prodB.price - prodA.price;
+                }
+              });
+            renderProducts(updatedProductsList);
+          } else {
+            let updatedProductsList = productsList.filter(filterFunction);
+            renderProducts(updatedProductsList);
+          }
+          function filterFunction(prod) {
+            if (filterCriteria === "0-50") {
+              return prod.price <= 50;
+            } else if (filterCriteria === "51-150") {
+              return prod.price > 50 && prod.price <= 150;
+            } else if (filterCriteria === ">150") {
+              return prod.price > 150;
+            } else {
+              return true;
+            }
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+​
+      function renderProducts(products) {
+        // product argument format :  [{title:"", price:""},{},{}]
+        // append all of these card in one container;
+        let container = document.getElementById("container");
+        container.innerHTML = ""; // empty out container to repaint DOM with the current products data that has been passed as argument;
+​
+        products.forEach(function (prod) {
+          // {id:1, title: "", }
+          let prodCard = document.createElement("div");
+          // go through each of the product --> 1 product = 1 div ( a card with that product detail )
+          // create card;
+​
+          // create product image;
+          let image = document.createElement("img");
+          image.src = prod.image; // image url src;
+​
+          // create product title
+          let title = document.createElement("p");
+          title.textContent = prod.title;
+​
+          // create prod price;
+          let price = document.createElement("p");
+          price.textContent = "Price : INR " + prod.price;
+​
+          // create Add to Cart button;
+          let addToCartButton = document.createElement("button");
+          addToCartButton.textContent = "Add to Cart";
+          addToCartButton.onclick = function (event) {
+            // add to cart --> items should get added to cart --> cart count should change in navbar;
+            addToCart(prod);
+          };
+​
+          prodCard.append(image, title, price, addToCartButton);
+          container.append(prodCard);
+        });
+​
+        function addToCart(prod) {
+          // input format : {id:1, title: "Mens Casual Premium Slim Fit T-Shirts",.....}
+          // we need to add this product to the cart ( cart is in local storage)
+          let cart = JSON.parse(localStorage.getItem("cart")); // get cart data from local storage;
+​
+          cart.push(prod); // add new item to the cart;
+​
+          localStorage.setItem("cart", JSON.stringify(cart)); // save the data to local storage;
+          refreshCartCount(cart); // refreshCartCount function gets invoked which will refresh cart count on navbar so it gets the latest data
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.taskHeader p {
+  font-size: 20px;
+  font-family: monospace;
+  line-height: 2;
+}
+h1{
+  background-color: rgba(46, 139, 87, 0.8);
+  padding: 10px;
+  color: white;
+  font-family: monospace;
+  font-size: 40px;
+  margin-bottom: 30px;
+}

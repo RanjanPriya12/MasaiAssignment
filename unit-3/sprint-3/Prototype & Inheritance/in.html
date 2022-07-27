@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var grandpa={
+    name:"Late Purushottam Prasad",
+    vill:"Mau",
+    home:10,
+    money:100000,
+    car:"Audi",
+
+}
+
+//console.log(grandpa)
+
+
+ var father=Object.create(grandpa)
+ father.name="Late Munna Prasad"
+//console.log(father)
+
+ var son=Object.create(father);
+ son.name="Alok Ranjan";
+ //console.log(son)
+ 
+
+console.log(son.home)
+console.log(son.car)
+console.log(son.money)
+    </script>
+</body>
+</html>

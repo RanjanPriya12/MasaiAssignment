@@ -1,0 +1,62 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+/*======================Index Page Container Styling==========================*/
+
+#container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#sidebar{
+    flex:1.5;
+    text-align: left;
+    height: 700px;
+    border-right: 2px solid white;
+    margin-right: 20px;
+    font-size: 24px;
+    padding: 10px;
+}
+#sidebar>div{
+    margin-top: 10px;
+}
+#main{
+    flex:8.5;
+    border: 2px solid black;
+    height: 600px;
+}
+input{
+    font-size: 16px;
+    padding: 5px;
+    margin:5px 0px;
+}
+#sidebar>div:hover{
+    font-size: 28px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+/*===================================Index Page Main Part Styling=======================================*/
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(2,45%);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    grid-gap: 5%;
+}
+#main>div{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+#main>div>img{
+    width: 100%;
+}

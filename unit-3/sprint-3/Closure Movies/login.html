@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*==========================Header Styling=========================*/
+
+        
+        #header{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(97, 20, 168);
+            height: 50px;
+            color: white;
+            position: fixed;
+            width: 100%;
+        }
+        #left{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        #right{
+            width: 40%;
+            display: flex;
+            margin-top: 10px;
+            margin-right: 20px;
+            justify-content: space-evenly;
+            font-size: 22px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        a:hover{
+            color: #0cb4e7;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #search{
+            width: 280px;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        #subscribe{
+            cursor: pointer;
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 15px;
+            background-color: rgb(6, 6, 240);
+        }
+        #subscribe:hover{
+            background-color: red;
+            color: black;
+        }
+
+        /*-----------------------------------Form Styling--------------------------------*/
+
+        form{
+            width: 30%;
+            margin: auto;
+        }
+        form>input{
+            width: 80%;
+            padding: 5px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        #form{
+            margin-top: 150px;
+        }
+        #submit{
+            background-color: rgb(51, 8, 170);
+            color: white;
+            width: 50%;
+            margin-left: 18%;
+            cursor: pointer;
+        }
+        #submit:hover{
+            background-color: brown;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="left">
+            <div id="logo">
+                <a href="index.html"><i>MOVIE-STORE</i></a>
+            </div>
+            <div><a href="trending.html">Trending Movie</a>
+            </div>
+            <div>
+                <a href="#">Sports</a>
+            </div>
+            <div><a href="#">Live</a>
+            </div>
+        </div>
+        
+        <div id="right">
+            <div>
+                <input id="search" oninput="debounce(main,1000)" type="text" placeholder="Search Movies Here..."/>
+            </div>
+            <div>
+                <span id="subscribe">SUBSCRIBE</span>
+            </div>
+            <div>
+                <a href="login.html" id="login">Login</a>
+            </div>
+        </div>
+    </header>
+   <br><br>
+    <div id="form">
+        <form>
+            <input type="text" placeholder="Enter your name" required  id="name"/><br>
+            <input type="number" placeholder="Mobile Number(+91)" required id="mbl"/><br>
+            <input type="email" name="" id="email" placeholder="Your email" required/><br>
+            <input type="password" placeholder="Enter Password" required id="pass"/><br>
+            <input onclick="window.location.href='index.html'" type="submit" id="submit"/>
+        </form>
+    </div>
+</body>
+</html>

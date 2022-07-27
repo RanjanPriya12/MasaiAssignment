@@ -1,0 +1,27 @@
+.addTask {
+  /* Sample */
+}
+
+.todoForm{
+  padding: 10px;
+}
+.todoForm input{
+  padding: 3px 5px;
+  font-size: 18px;
+  width: 300px;
+}
+
+.todoForm button{
+  margin-left: 5px;
+  background-color: rgba(46, 139, 87,0.8);
+  /* border: none; */
+  border: 1px groove seagreen;
+  font-size: 22px;
+  padding: 1px 5px;
+  color: #fff;
+  font-weight: bold;
+}
+.todoForm button:hover{
+  background-color: seagreen;
+  cursor: pointer;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(110, 240, 149);
+        }
+        #search {
+            width: 100%;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+           
+        }
+
+        #search>input {
+            background-color: rgb(133, 235, 201);
+            width: 300px;
+            margin-top: 15px;
+            height: 30px;
+            border-radius: 20px;
+            padding-left: 10px;
+            font-size: 18px;
+        }
+
+        #search>button {
+            width: 100px;
+            height: 35px;
+            border-radius: 16px;
+            background-color: rgb(133, 235, 201);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #search>button:hover{
+            background-color:rgb(211, 56, 56) ;
+            color: aqua;
+        }
+
+        #map_div{
+            display: flex;
+            width: 85%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 300px;
+            width: 350px;
+        }
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 300px;
+            width: 40%px;  
+        }   
+        
+        a{
+            text-decoration: none;
+            font-size: 25px;
+            color: red;
+            font-weight: bold;
+        }
+
+        #forcost{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            gap: 5px;
+        }
+        #forcost>div{
+            width: 12%;
+            margin-top: 60px;
+            border-radius: 40px;
+            background-color: rgb(71, 230, 230);
+            color: black;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="search">
+        <input type="text" id="city" placeholder="Enter City Name">
+        <button onclick="getData()">Search</button>
+    </div>
+
+
+    <div id="map_div">
+        <div id="today">
+        </div>
+        <div class="mapouter" id="map">
+            <div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+               <a  href="https://www.embedgooglemap.net">Use Map to Explore This City</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="forcost">
+        
+    </div>
+
+</body>
+
+</html>
+<script>
+    //
+    var key = "c75fe9c69f2998626a75414a88c26470";
+    //api.openweathermap.org/data/2.5/forecast/daily?q={city name}&cnt={cnt}&appid={API key}
+    // var url=``https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`
+
+    let iframe = document.querySelector("#gmap_canvas");
+
+    async function getData() {
+
+        try {
+            let x = 7;
+            let city = document.querySelector("#city").value;
+            let res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=${x}&appid=${key}&units=metric`
+            )
+            let data = await res.json();
+            console.log("Data:", data);
+            appendData(data);
+        }
+        catch (err) {
+            console.log("err:", err)
+        }
+
+    }
+    function appendData(data) {
+        console.log(data)
+        document.querySelector("#today").innerHTML = "";
+        let div=document.createElement("div");
+
+        let h2=document.createElement('h2');
+        h2.textContent=`Today's Weather`;
+
+        let name = document.createElement('h4');
+        name.textContent = `City : ${data.city.name}`;
+
+        let Humidity = document.createElement("h4");
+        Humidity.textContent = `Humidity : ${data.list[0].main.humidity}`;
+
+        let Tempreture = document.createElement("h4");
+        Tempreture.textContent = `Tempreture : ${data.list[0].main.temp}°C`;
+
+        let Pressure = document.createElement("h4");
+        Pressure.textContent = `Pressure : ${data.list[0].main.pressure}`;
+
+        iframe.src = `https://maps.google.com/maps?q=${data.city.name}&t=&z=13&ie=UTF8&iwloc=&output=embed`
+        div.append(h2,name,Humidity,Tempreture,Pressure);
+        document.querySelector("#today").append(div);
+        document.querySelector(".gmap_canvas").append(iframe);
+        document.querySelector("#forcost").innerHTML="";
+        for (var i = 0; i < 7; i++) {
+            
+            let div1 =document.createElement("div");
+            div1.setAttribute("id","sumary");
+
+            let dayDate=document.createElement("h5");
+            dayDate.innerText=`Date : ${data.list[i].dt_txt}`;
+
+            let max_temp = document.createElement("h5");
+            max_temp.textContent = `Max-temp : ${data.list[i].main.temp_max}°C `;
+
+            let min_temp = document.createElement("h5");
+            min_temp.textContent = `Min-temp : ${data.list[i].main.temp_min}°C`;
+           
+            let sunrise=document.createElement("h5")
+            let sun= (new Date(data.city.sunrise*1000)).toLocaleTimeString();
+            sunrise.innerText=`Sunrise : ${sun}`;
+
+            let sunset=document.createElement("h5")
+            sunset= (new Date(data.city.sunset*1000)).toLocaleTimeString();
+            sunset.innerText=`SunSet : ${sunset}`;
+
+            let sumarysun=document.createElement("h5")
+            sumarysun.textContent=`Sunrise-Sunset : ${sun}-${sunset}`;
+
+
+            let wind=document.createElement("h5");
+            wind.innerText=`Wind-speed : ${data.list[i].wind.speed}`;
+
+            div1.append(dayDate,max_temp,min_temp,wind,sumarysun);
+
+            document.querySelector("#forcost").append(div1);
+        
+        }
+
+        
+    }
+
+
+
+
+
+</script>

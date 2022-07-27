@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsplash Images</title>
+    <style>
+      body{
+        background-color: rgb(19, 17, 17);
+        color: white;
+      }
+      #container{
+        display: flex;
+        justify-content: space-between;
+      }
+      #sidebar{
+        flex:1.5;
+        border-right: 3px solid black;
+        height: 600px;
+        font-size: 20px;
+        margin: 10px;
+      }
+      #sidebar>div:hover{
+        font-size: 25px;
+      }
+      #main{
+        flex:8.5;
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        grid-gap: 3%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="sidebar">
+        <!--DO NOT CHANGE THIS ID's-->
+        <!--Append the horizontal navbar(sidebar) here only-->
+        
+      </div>
+
+      <div id="main">
+        <!--DO NOT CHANGE THIS ID's-->
+        <!--Append top images here only-->
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  let navbar=document.getElementById('sidebar');
+  import {sidebar} from "./components/sidebar.js";
+
+  import {getData,appendData} from "./scripts/main.js";
+  navbar.innerHTML=sidebar();
+
+  //let url=`https://api.unsplash.com/photos/?&query=${input_val}&client_id=u6wEwe8Z6O3D74c9TUArDxu4pPExu2fjKq1W6MuXonc&per_page=50`;
+
+  let url=`https://api.unsplash.com/photos/?client_id=dEM8MwxgVrYTN_dyBquyIGFWMSKZPLU_xfPR5AJ1k4A`
+  let data1=await getData(url);
+  let parent=document.getElementById('main');
+  appendData(data1,parent);
+
+  let input=document.getElementById('search');
+  input.addEventListener('keypress',(event)=>{
+    if(event.key=='Enter'){
+      let input_term=document.getElementById('search').value;
+      localStorage.setItem('Item','input_term');
+      window.location.href='search.html';
+    }
+  });
+</script>

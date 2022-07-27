@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Detail</title>
+    <style>
+        #main{
+            width: 400px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        form{
+            width: 90%;
+            margin: auto;
+        }
+        form input{
+            width: 80%;
+            margin: 5px;
+            padding: 5px;
+        }
+        #submit{
+            width: 100px;
+            margin-left: 30%;
+        }
+        table,th,td{
+            border: 1px solid rgb(70, 67, 67);
+            border-collapse: collapse;
+            width: 500px;
+            margin-top: 30px;
+        }
+        td{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>Student Detail</h2>
+        <form>
+            <input type="text" id="name" placeholder="Student Name"/><br>
+            <input type="number" id="mbl" placeholder="Mobile Number"/><br>
+            <input type="text" id="city" placeholder="City Name"/><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+        <div id="detail">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>phone Number</th>
+                        <th>City Name</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#submit").addEventListener("click",getvalue);
+    var arr=JSON.parse(localStorage.getItem("StudentData")) || [];
+    createTable();
+    function getvalue(event){
+        event.preventDefault();
+        var name=document.querySelector("#name").value;
+        var phone=document.querySelector("#mbl").value;
+        var city=document.querySelector("#city").value;
+        var student1=new student(name,phone,city);
+        arr.push(student1);
+        localStorage.setItem("StudentData",JSON.stringify(arr));
+        console.log(arr);
+        createTable();
+    }
+    function student(name,phone,city){
+        this.name=name;
+        this.phone=phone;
+        this.city=city;
+    }
+    function createTable(){
+        document.querySelector("tbody").textContent="";
+        arr.map(function(ele){
+            
+            
+            var tr=document.createElement("tr");
+           
+            var td1=document.createElement("td");
+            td1.textContent=ele.name;
+
+            var td2=document.createElement("td");
+            td2.textContent=ele.phone;
+
+            var td3=document.createElement("td");
+            td3.textContent=ele.city;
+
+            tr.append(td1,td2,td3);
+            document.querySelector("tbody").append(tr);
+        })
+    }
+</script>

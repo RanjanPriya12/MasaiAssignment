@@ -1,0 +1,21 @@
+db.Movies.find({movie_name: {$eq: "Robbyn Longhi"}})
+
+db.Movies.find({movie_name: {$ne: "Robbyn Longhi"}})
+
+db.Movies.find({$and: [{budget: {$gt:12000}}, {budget: {$gte: 12000}}]})
+db.Movies.find({$and: [{budget: {$lt:12000}}, {budget: {$lte: 12000}}]})
+
+db.Movies.find({$and: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]})
+db.Movies.find({$or: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]})
+db.Movies.find({$nor: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]})
+db.Movies.find({$or: [{production_year: {$ne: 2000}},{budget: {$ne: 10000}}]})
+db.Movies.find({$and: [{production_year: {$gte: 2000}},{production_year: {$gte: 2000}}]})
+
+db.Movies.find({}).sort({production_year: -1, movie_name: 1})
+
+db.Movies.find({}).sort({production_year: -1, movie_name: 1}).skip(10).limit(5)
+db.users.aggregate(
+   [
+     { $sort : { age : -1, posts: 1 } }
+   ]
+)

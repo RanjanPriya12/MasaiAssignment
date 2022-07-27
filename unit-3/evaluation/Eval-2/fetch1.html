@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        #nav {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(15, 15, 59);
+            color: white;
+            position: fixed;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        ul li {
+            list-style: none;
+            line-height: 50px;
+            font-size: 22px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 3px;
+            border-radius: 12px;
+            width: 280px;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 12px;
+            background-color: rgb(99, 99, 238);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #slideshow {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 350px;
+            margin-top: -5px;
+        }
+
+        #container {
+            width: 70%;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        #container>div {
+            display: flex;
+        }
+
+        #right {
+            margin-top: 80px;
+            display: block;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#">My Show</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><input required id="input" placeholder="Enter the name of Movie" /><button onclick="getData()"
+                    id="btn">SEARCH</button></li>
+            <li><a href="#">Subscribe</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+    <div id="slideshow">
+        <!--Show Slideshow here-->
+
+        <img src="" id="pic" alt="">
+
+    </div>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    // Slide Show Part
+
+    let image = ['https://image.shutterstock.com/image-photo/bangkok-thailand-december-8-2019-600w-1588449007.jpg',
+        'https://static-koimoi.akamaized.net/wp-content/new-galleries/2015/11/ghayal-once-again-movie-poster-3.jpg',
+        'https://webneel.com/daily/sites/default/files/images/daily/08-2018/1-india-movie-poster-design-bollywood-padmaavat.jpg',
+        'https://rukminim1.flixcart.com/image/416/416/jcc9ci80/poster/g/x/c/medium-pl-avengers-assemble-wall-poster-19-13-inches-matte-original-imaetdvafjtmjhbh.jpeg?q=70',
+        'https://images.squarespace-cdn.com/content/v1/5c75dfa97d0c9166551f52b1/1571759141591-I1RAI5I59E74DIYCLY57/Large_3909.jpg',
+        'https://i.ytimg.com/vi/O_Wtp6Hyzu8/maxresdefault.jpg'];
+
+    localStorage.setItem("Images", JSON.stringify(image));
+    let picture = document.getElementById("pic");
+    function slideImage() {
+        let img = JSON.parse(localStorage.getItem("Images"));
+        let i = 0;
+        let x = setInterval(function () {
+            if (i === img.length) {
+                i = 0;
+            }
+            picture.src = img[i];
+            i++;
+        }, 1500);
+    }
+    slideImage();
+
+
+    //Movie Fetching Part
+
+    let key = 643e6741;
+    //url= http://www.omdbapi.com/?apikey=[yourkey]&
+    //key= 643e6741
+    function getData() {
+        let movie = document.getElementById("input").value;
+        if (movie == "") {
+            alert("enter the name of movie")
+        }
+        else {
+            async function mydata() {
+                try {
+                    let res = await fetch(`http://www.omdbapi.com/?apikey=643e6741&t=${movie}`);
+                    let data = await res.json();
+                    console.log("data", data);
+                    appendMovie(data)
+                } catch (err) {
+                    console.log("err", err);
+                }
+            }
+
+            mydata();
+            function appendMovie(data) {
+                console.log(data);
+                if (data.Response == "True") {
+                    //document.getElementById("container")="";
+                    document.getElementById("input").value = "";
+                    //data.forEach(function(ele){}
+                    let div = document.createElement("div");
+                    let div1 = document.createElement("div");
+                    div1.setAttribute("id", 'left');
+
+                    let div2 = document.createElement("div");
+                    div2.setAttribute("id", 'right');
+
+                    let image = document.createElement("img");
+                    image.src = data.Poster;
+                    image.style.width = "250px";
+                    image.style.height = "250px";
+
+                    let movieName = document.createElement("h3");
+                    movieName.innerHTML = `Movie Name : ${data.Title}`;
+
+                    let actorName = document.createElement("h3");
+                    actorName.innerHTML = `Actor Name : ${data.Actors}`;
+
+                    let rating = document.createElement("h3");
+                    rating.innerHTML = `Rating : ${data.imdbRating}`;
+                    let rate=data.imdbRating;
+                    let year = document.createElement("h3")
+                    year.innerHTML = `Release Year : ${data.Year}`;
+
+                    if(rate>8.5){
+                        console.log(rate);
+                        let dis=document.createElement('h1');
+                        dis.innerHTML='Most Watched High Rated Block Buster Movie';
+                        div1.append(image);
+                        div2.append(movieName, actorName, rating, year,dis)
+                        div.append(div1, div2);
+                        document.getElementById("container").append(div);
+                    }
+                    else{
+                        div1.append(image);
+                        div2.append(movieName, actorName, rating, year)
+                        div.append(div1, div2);
+                        document.getElementById("container").append(div);
+                    }
+                }
+                else {
+                    alert("Movie not found");
+                    document.getElementById("container").innerHTML = "";
+                    let div = document.createElement("div");
+                    let image = document.createElement("img")
+                    image.style.width = "100%";
+                    image.style.height = "300px";
+                    image.src = "https://i.pinimg.com/originals/5d/35/e3/5d35e39988e3a183bdc3a9d2570d20a9.gif";
+                    div.append(image);
+                    document.getElementById("container").append(div);
+                }
+            }
+        }
+
+    }
+
+
+
+</script>

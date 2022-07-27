@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="/styles/index.css">
+    </head>
+
+    <body>
+        <div id="nav">
+            <div id="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyg6UChcJ2u7C89OrVeNXLGTdBGGRevMw4Q&usqp=CAU" alt="">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>><a href="signup.html">Sign Up</a></li>
+                    <li>><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="slideshow">
+            <!--Show Slideshow here-->
+
+            <img src="" id="pic" alt="">
+
+        </div>
+
+        <div id="sort-buttons">
+
+            <!--Add sorting here-->
+            <select name="" id="sortbtn" onchange="sortMovie()">
+                <option value="abc">Sort By Rating</option>
+                <option id="sort-lh" value="asc">Low To High</option>
+                <option id="sort-hl" value="dec">High To Low</option>
+
+            </select>
+        </div>
+        <div id="movies">
+            <!--Show list of movies here-->
+        </div>
+        <script src="/scripts/index.js"></script>
+    </body>
+
+</html>

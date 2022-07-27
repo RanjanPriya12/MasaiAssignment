@@ -1,0 +1,796 @@
+{
+  "product": [
+    {
+      "rest_name": "KATTAPA TAKEAWAY",
+      "desc": "Thalis, North Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hourseeiokrsgcmwagdo",
+      "rating": 3.2,
+      "price": 120,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 140,
+      "votes": 354,
+      "review": 750
+    },
+    {
+      "rest_name": "Burger King",
+      "desc": "American",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/geye9t1srrrr9c3yorbs",
+      "rating": 4.1,
+      "price": 350,
+      "off": "60%",
+      "coupon": "Use StealDeal",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 350,
+      "review": 550
+    },
+    {
+      "rest_name": "La Pino'z Pizza",
+      "desc": "Pizzas, Italian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dek7ifvgfbnddngpqn4r",
+      "rating": 3.8,
+      "price": 250,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 500,
+      "votes": 240,
+      "review": 750
+    },
+    {
+      "rest_name": "The Kalika Hut",
+      "desc": "Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qmhiwv4udnbpbrsvtf5s",
+      "rating": 4.1,
+      "price": 350,
+      "off": "50%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 790,
+      "review": 1500
+    },
+    {
+      "rest_name": "Red Dragon (Chopstix)",
+      "desc": "Chinese, Arabian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qmhiwv4udnbpbrsvtf5s",
+      "rating": 3.8,
+      "price": 250,
+      "off": "60%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 500,
+      "votes": 850,
+      "review": 2600
+    },
+    {
+      "rest_name": "Balaji Bhojnalay",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bpvaicbzi3sb6f3bsbih",
+      "rating": 3.9,
+      "price": 150,
+      "off": "60%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 300,
+      "votes": 650,
+      "review": 2070
+    },
+    {
+      "rest_name": "Pocket Bites",
+      "desc": "Chinese, North Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/t5q9gfehb7heue8qtqmv",
+      "rating": 4.2,
+      "price": 250,
+      "off": "60%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 500,
+      "votes": 550,
+      "review": 420
+    },
+    {
+      "rest_name": "HUNGRY KYA",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qtda3vuvwmzjyms9gfi4",
+      "rating": 3.5,
+      "price": 200,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 400,
+      "votes": 450,
+      "review": 2500
+    },
+    {
+      "rest_name": "Subway",
+      "desc": "Healthy Food, Salads",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wh9kbbealqkpgjmfainu",
+      "rating": 3.4,
+      "price": 200,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 400,
+      "votes": 250,
+      "review": 300
+    },
+    {
+      "rest_name": "GIANI",
+      "desc": "Ice Cream, Desserts",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/j8m5r5nu99mp1iknfmlk",
+      "rating": 4.2,
+      "price": 500,
+      "off": "50%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 1000,
+      "votes": 750,
+      "review": 2200
+    },
+    {
+      "rest_name": "Rovers",
+      "desc": "Fast Food, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rgdv1xbiy4pyywkm9nbh",
+      "rating": 3.6,
+      "price": 250,
+      "off": "60%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 500,
+      "votes": 215,
+      "review": 400
+    },
+    {
+      "rest_name": "The Cake Shop",
+      "desc": "Bakery, Desserts",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/uralfdawwhtgii1qfmzq",
+      "rating": 3.9,
+      "price": 150,
+      "off": "60%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 300,
+      "votes": 150,
+      "review": 400
+    },
+    {
+      "rest_name": "Wendy's",
+      "desc": "American",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/awrnfwwvkn5r3bwejpo4",
+      "rating": 3.7,
+      "price": 270,
+      "off": "60%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 540,
+      "votes": 350,
+      "review": 700
+    },
+    {
+      "rest_name": "Kwality Ice Cream Shop",
+      "desc": "Ice Cream, Desserts",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kvyfk7rtq0fbnziynffg",
+      "rating": 4.6,
+      "price": 280,
+      "off": "60%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 560,
+      "votes": 550,
+      "review": 4300
+    },
+    {
+      "rest_name": "Gopiz by Balaji",
+      "desc": "Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qyf1zhknshqdjlwnpcu7",
+      "rating": 3.9,
+      "price": 260,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 520,
+      "votes": 950,
+      "review": 2800
+    },
+    {
+      "rest_name": "Giani's",
+      "desc": "Ice Cream, Beverages",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rxgorifaqc4qfm32ow3t",
+      "rating": 4.3,
+      "price": 290,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 580,
+      "votes": 520,
+      "review": 780
+    },
+    {
+      "rest_name": "Bhargava Restaurant",
+      "desc": "Ice Cream, Beverages",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/irganf8qj7qts2rp3vyz",
+      "rating": 3.7,
+      "price": 300,
+      "off": "50%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 600,
+      "votes": 210,
+      "review": 800
+    },
+    {
+      "rest_name": "Jai Bharat Restaurant",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jdlny8j1wi0hri3ik7ad",
+      "rating": 3.7,
+      "price": 420,
+      "off": "50%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 840,
+      "votes": 250,
+      "review": 900
+    },
+    {
+      "rest_name": "Balaji Grand",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/f5pj9df6wnsvnpwkmzz1",
+      "rating": 4.2,
+      "price": 250,
+      "off": "50%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 500,
+      "votes": 150,
+      "review": 300
+    },
+    {
+      "rest_name": "LunchBox - Meals and Thalis",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rzpfumdzzpxqawsxckqp",
+      "rating": 4.1,
+      "price": 200,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 400,
+      "votes": 450,
+      "review": 2200
+    },
+    {
+      "rest_name": "Royal Cafe- Royal Inn",
+      "desc": "Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/y40uowgabeu94snlavki",
+      "rating": 4.5,
+      "price": 400,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 800,
+      "votes": 850,
+      "review": 5400
+    },
+    {
+      "rest_name": "Meals by Lunchbox",
+      "desc": "North Indian, Desserts",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mv3rbqsagqjysupywwba",
+      "rating": 4.5,
+      "price": 350,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 730,
+      "review": 1200
+    },
+    {
+      "rest_name": "Mash Briyani",
+      "desc": "Biryani, Arabian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/espkakbzunuh30qrqimt",
+      "rating": 4.2,
+      "price": 320,
+      "off": "50%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 640,
+      "votes": 450,
+      "review": 2800
+    },
+    {
+      "rest_name": "Vills Foods",
+      "desc": "Chinese, Snacks",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ojpei8rtjjmdr01gomey",
+      "rating": 3.5,
+      "price": 200,
+      "off": "30%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "maggi",
+      "cost_for_two": 400,
+      "votes": 650,
+      "review": 5400
+    },
+    {
+      "rest_name": "CHAMPARAN HANDI MEAT",
+      "desc": "North Indian, Mughlai",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dxh9bxdr54sslqtrxdsk",
+      "rating": 3.5,
+      "price": 200,
+      "off": "40%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "nonveg",
+      "cost_for_two": 400,
+      "votes": 5250,
+      "review": 8600
+    },
+    {
+      "rest_name": "The-Golgappa.Com",
+      "desc": "Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/g2ojthtqhsccqchfaeda",
+      "rating": 3.5,
+      "price": 210,
+      "off": "40%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 420,
+      "votes": 1520,
+      "review": 2900
+    },
+    {
+      "rest_name": "Madras Dosa - Trusted & Hygiene",
+      "desc": "South Indian, North Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qxrqbjfbwnjibpjstp4t",
+      "rating": 4.2,
+      "price": 350,
+      "off": "40%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 850,
+      "review": 2600
+    },
+    {
+      "rest_name": "MR FREDDY",
+      "desc": "Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nwbfqdukgzzicadn1qp2",
+      "rating": 4.2,
+      "price": 350,
+      "off": "40%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 750,
+      "review": 2600
+    },
+    {
+      "rest_name": "Bhargava Restaurant",
+      "desc": "Ice Cream, Beverages",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kvyfk7rtq0fbnziynffg",
+      "rating": 3.7,
+      "price": 300,
+      "off": "50%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 600,
+      "votes": 210,
+      "review": 800
+    },
+    {
+      "rest_name": "Jai Bharat Restaurant",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hourseeiokrsgcmwagdo",
+      "rating": 3.7,
+      "price": 420,
+      "off": "50%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 840,
+      "votes": 250,
+      "review": 900
+    },
+    {
+      "rest_name": "Balaji Grand",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bnpy0ljxighgcq7i7gts",
+      "rating": 4.2,
+      "price": 250,
+      "off": "50%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 500,
+      "votes": 150,
+      "review": 300
+    },
+    {
+      "rest_name": "LunchBox - Meals and Thalis",
+      "desc": "North Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/uws6wm1xndcgtox6moif",
+      "rating": 4.1,
+      "price": 200,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 400,
+      "votes": 450,
+      "review": 2200
+    },
+    {
+      "rest_name": "Royal Cafe- Royal Inn",
+      "desc": "Indian, Chinese",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bnpy0ljxighgcq7i7gts",
+      "rating": 4.5,
+      "price": 400,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 800,
+      "votes": 850,
+      "review": 5400
+    },
+    {
+      "rest_name": "Meals by Lunchbox",
+      "desc": "North Indian, Desserts",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hourseeiokrsgcmwagdo",
+      "rating": 4.5,
+      "price": 350,
+      "off": "50%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 730,
+      "review": 1200
+    },
+    {
+      "rest_name": "Mash Briyani",
+      "desc": "Biryani, Arabian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ifckr4auq9wbtvmodgme",
+      "rating": 4.2,
+      "price": 320,
+      "off": "50%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 640,
+      "votes": 450,
+      "review": 2800
+    },
+    {
+      "rest_name": "Vills Foods",
+      "desc": "Chinese, Snacks",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rgdv1xbiy4pyywkm9nbh",
+      "rating": 3.5,
+      "price": 200,
+      "off": "30%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "maggi",
+      "cost_for_two": 400,
+      "votes": 650,
+      "review": 5400
+    },
+    {
+      "rest_name": "CHAMPARAN HANDI MEAT",
+      "desc": "North Indian, Mughlai",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/j8m5r5nu99mp1iknfmlk",
+      "rating": 3.5,
+      "price": 200,
+      "off": "40%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "nonveg",
+      "cost_for_two": 400,
+      "votes": 5250,
+      "review": 8600
+    },
+    {
+      "rest_name": "The-Golgappa.Com",
+      "desc": "Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/c3y4gwdmnbqrfhvnqjxi",
+      "rating": 3.5,
+      "price": 210,
+      "off": "40%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 420,
+      "votes": 1520,
+      "review": 2900
+    },
+    {
+      "rest_name": "Madras Dosa - Trusted & Hygiene",
+      "desc": "South Indian, North Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/yezmisoxii0xjp7cgbdg",
+      "rating": 4.2,
+      "price": 350,
+      "off": "40%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 850,
+      "review": 2600
+    },
+    {
+      "rest_name": "MR FREDDY",
+      "desc": "Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ae9ookfjiadpxxxsuezk",
+      "rating": 4.2,
+      "price": 350,
+      "off": "40%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 750,
+      "review": 2600
+    },
+    {
+      "rest_name": "Vills Foods",
+      "desc": "Chinese, Snacks",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kpdeqh6kvpvdqdats2ns",
+      "rating": 3.5,
+      "price": 200,
+      "off": "30%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "maggi",
+      "cost_for_two": 400,
+      "votes": 650,
+      "review": 5400
+    },
+    {
+      "rest_name": "CHAMPARAN HANDI MEAT",
+      "desc": "North Indian, Mughlai",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nnpo1zwmaqtlhhhu0azu",
+      "rating": 3.5,
+      "price": 200,
+      "off": "40%",
+      "coupon": "Use Welcome50",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "nonveg",
+      "cost_for_two": 400,
+      "votes": 5250,
+      "review": 8600
+    },
+    {
+      "rest_name": "The-Golgappa.Com",
+      "desc": "Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qlrgb6tidtiqm0bsxeap",
+      "rating": 3.5,
+      "price": 210,
+      "off": "40%",
+      "coupon": "Use TRYNEW",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 420,
+      "votes": 1520,
+      "review": 2900
+    },
+    {
+      "rest_name": "Madras Dosa - Trusted & Hygiene",
+      "desc": "South Indian, North Indian",
+      "image_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ybwvgnhmgwrdb4me5um5",
+      "rating": 4.2,
+      "price": 350,
+      "off": "40%",
+      "coupon": "Use SPECIALS",
+      "payment_methods": {
+        "card": true,
+        "cash": true,
+        "upi": true
+      },
+      "category": "veg",
+      "cost_for_two": 700,
+      "votes": 850,
+      "review": 2600
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 60%;
+  margin: auto;
+  color: wheat;
+  background-color: rgb(53, 116, 152);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.AddTodo input{
+   width: 40%;
+   padding: 5px;
+   font-size: 18px;
+   margin-top: 10px;
+}
+.AddTodo button{
+  width: 100px;
+  padding: 5px;
+   font-size: 18px;
+   margin-top: 10px;
+   cursor: pointer;
+   color: rgb(128, 119, 101);
+}
+
+.TodoText{
+  font-size: 24px;
+}
+.Todo{
+  width: 52%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}

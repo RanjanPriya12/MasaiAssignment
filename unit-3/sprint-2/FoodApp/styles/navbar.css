@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(25, 25, 146);
+    justify-content: space-around;
+    position: fixed;
+    align-items: center;
+    margin-bottom: 60px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+a:hover{
+    color: rgb(23, 206, 99);
+}
+#right>a{
+    margin-left: 80px;
+}
+#search{
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+#search:hover{
+    width: 450px;
+}
+
+
+/*-------------------------------Container CSS------------------------------------*/
+
+#container{
+    background-color: rgb(162, 237, 250);
+}
+#container>div{
+    display: grid;
+    gap:30px;
+    width: 70%;
+    grid-template-columns: 400px 650px;
+    grid-template-rows: 300px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#check{
+    box-shadow: 2px 2px 4px 4px gray;
+    background-color: rgb(122, 207, 96);
+    border-radius: 10%;
+}
+#description{
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 20px;
+}
+p{
+    font-size: 18px;
+}
+#Price{
+    display: flex;
+    justify-content: space-evenly;
+    color: blue;
+    font-size: 20px;
+}
+button{
+    background-color: rgb(211, 58, 58);
+    color: white;
+    border: none;
+    width: 300px;
+    padding: 8px;
+    margin: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+button:hover{
+    font-size: 23px;
+    background-color: rgb(231, 52, 156);
+}
+
+
+
+/*----------------------------------------Login CSS-------------------------------------*/
+
+#form{
+    height: 730px;
+    background-color: aqua;
+}
+form{
+    width: 25%;
+    margin: auto;
+    margin-top: 100px;
+}
+form input{
+    width: 98%;
+    margin: auto;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 18px;
+    border: 0cm;
+}
+form input:hover{
+    background-color: greenyellow;
+    padding: 10px;
+}
+#login{
+    width: 98%;
+}

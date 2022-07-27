@@ -1,0 +1,94 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Brush",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "title": "Bath",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "title": "Breakfast",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "title": "Scrum",
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "title": "DSA Contest",
+      "isCompleted": false
+    },
+    {
+      "id": 6,
+      "title": "Lunch",
+      "isCompleted": false
+    },
+    {
+      "id": 7,
+      "title": "React PreClass",
+      "isCompleted": false
+    },
+    {
+      "id": 8,
+      "title": "React Live Class",
+      "isCompleted": false
+    },
+    {
+      "id": 9,
+      "title": "Assignment",
+      "isCompleted": false
+    },
+    {
+      "id": 10,
+      "title": "Study",
+      "isCompleted": false
+    },
+    {
+      "id": 11,
+      "title": "DSA Problem",
+      "isCompleted": false
+    },
+    {
+      "id": 12,
+      "title": "Dinner",
+      "isCompleted": false
+    },
+    {
+      "id": 13,
+      "title": "Sleep",
+      "isCompleted": false
+    },
+    {
+      "id": 14,
+      "title": "Exercise",
+      "isCompleted": false
+    },
+    {
+      "id": 15,
+      "title": "Gym",
+      "isCompleted": false
+    },
+    {
+      "id": 16,
+      "title": "Fresh",
+      "isCompleted": false
+    },
+    {
+      "title": "Hello",
+      "isCompleted": false,
+      "id": 1654019737721
+    },
+    {
+      "title": "Fresh",
+      "isCompleted": false,
+      "id": 1654019966426
+    }
+  ]
+}

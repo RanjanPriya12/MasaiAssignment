@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WE</h1>
+</body>
+</html>
+<script > 
+const a1=new Array(1,2,6,4)
+    console.log("a1:",a1)
+    Object.defineProperty(this,"length", {
+    writable:true,
+    enumerable:false
+    });
+    
+    function Array2(){
+        for(let i=0;i<arguments.length;i++){
+            this[i]=arguments[i]
+            this.length=arguments.length
+        }
+    }
+    const a2= new Array2("raju","maono","babu","pablo");
+    console.log("a2:" ,Object.values(a2));
+    Array2.prototype.PUSH= function(x){
+        let index=this.length;
+        this[index]=x
+        this.length++;
+    }
+    // a2.PUSH('RamBhaiya')
+    
+    Array2.prototype.REMOVE=function(){
+        let index=this.length-1;
+        delete this[index]
+        this.length--;
+    }
+    // a2.REMOVE()
+    a2.PUSH('RamBhaiya')
+    // console.log(a2)
+
+    Array2.prototype.उलट=function(){
+     var L=0;
+     var R=this.length-1;
+while(L<R){
+    var temp=this[L];
+    this[L]=this[R];
+    this[R]=temp;
+    L++;
+    R--;
+}
+        return this;
+    }
+  var x= a2.उलट()
+//   console.log(x)
+
+Array2.prototype.FirstE=function(){
+    return this[0];
+}
+var x=a2.FirstE()
+console.log(x)
+
+
+    </script>

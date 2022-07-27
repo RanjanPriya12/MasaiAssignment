@@ -1,0 +1,92 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(226, 160, 160);
+  position: fixed;
+  height: 35px;
+}
+
+.navbar h2 {
+  cursor: pointer;
+}
+
+h3 {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.main {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+select {
+  width: 250px;
+  text-align: center;
+  font-size: 16px;
+  padding: 3px;
+}
+
+.flex {
+  display: flex;
+  width: 200px;
+  margin: auto;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  justify-content: space-between;
+}
+
+p {
+  margin-top: -8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  margin: auto;
+}
+.rating {
+  background-color: chartreuse;
+  padding: 2px;
+}
+.card {
+  height: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+}
+
+.card button {
+  width: 200px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(226, 160, 160);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.card:hover {
+  border: 1px solid rgb(77, 76, 76);
+}

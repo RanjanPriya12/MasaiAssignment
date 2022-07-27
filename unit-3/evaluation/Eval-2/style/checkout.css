@@ -1,0 +1,39 @@
+*{
+    background-color: rgb(107, 224, 233);
+}
+#order-form{
+    width: 80%;
+    margin: auto;
+}
+form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+input{
+    width: 70%;
+    text-align: center;
+    margin: 5px;
+    padding: 6px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(113, 238, 161);
+    border: 1px solid gray;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+#submit{
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    margin: auto;
+    background-color: rgb(230, 54, 54);
+    margin-top: 10px;
+    border-radius: 15px;
+    border: none;
+    color: rgb(214, 200, 200);
+    cursor: pointer;
+}

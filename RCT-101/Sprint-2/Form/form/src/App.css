@@ -1,0 +1,19 @@
+.app {
+  text-align: center;
+ 
+}
+
+.App{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+table,tbody,thead,th,tr,td{
+  border: 1px solid gray;
+  border-collapse: collapse;
+  text-align: center;
+}
+button{
+  cursor: pointer;
+}

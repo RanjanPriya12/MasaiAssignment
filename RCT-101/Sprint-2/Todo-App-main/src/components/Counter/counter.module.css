@@ -1,0 +1,27 @@
+.counter {
+  /* TODO */
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin-right: 15px;
+}
+.counter .button{
+  /* font-size: 12px; */
+  padding: 0px 5px;
+  background: rgba(46, 139, 87, 0.8);
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.counter .button:hover{
+  background-color: seagreen;
+}
+span{
+  font-size: 20px;
+}
+p{
+  display: inline-block;
+  width: 12px;
+  border: 1px solid white;
+  margin-bottom: 6px;
+}

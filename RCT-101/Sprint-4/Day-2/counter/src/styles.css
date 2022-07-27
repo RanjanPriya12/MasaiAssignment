@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+button{
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+}
+.Even{
+  color:green;
+  
+}
+.Odd{
+  color:red;
+  
+}
+span{
+  font-size:18px;
+  font-weight: bolder;
+}

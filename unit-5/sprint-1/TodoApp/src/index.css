@@ -1,0 +1,59 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.imageContainer{
+    width:100%;
+    text-align:center;
+}
+
+#form{
+    text-align:center;
+    width: 40%;
+    margin: auto;
+}
+
+#text{
+    width: 90%;
+    height: 20px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#submit{
+    height: 34px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#table{
+    width: 60%;
+    margin: auto;
+    border: 1px solid gray;
+    margin-top: 20px;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+#caption{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+thead, tr,td,th,tbody{
+    border: 1px solid gray;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+}
+
+td,th{
+    width: 50%;
+}
+
+#del{
+    cursor: pointer;
+}
